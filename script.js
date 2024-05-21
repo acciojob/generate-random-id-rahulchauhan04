@@ -1,7 +1,16 @@
 function makeid(l) {
   // write your code here
+	const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890';
+	let result = '';
+	const charactersLength = characters.length;
+
+	for (let i = 0; i < l; i++) {
+		result += characters.charAT(Math.floor(Math.random() * charactersLength));
+	}
+	return result;
 }
 
 // Do not change the code below.
 const l = prompt("Enter a number.");
 alert(makeid(l));
+
